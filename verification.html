@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Earn trusted accessibility badges: Just Verified (remote) and Verified+ (on-site). Display on your website and in Ableverse directory."
+    />
+    <title>Get Verified – Ableverse</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- NAV (same as index.html) -->
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav__bar container">
+        <button
+          class="nav__toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <ul class="nav__list" id="nav-list">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+
+          <!-- Dropdown – button styled exactly like a link -->
+          <li class="nav__item nav__item--dropdown">
+            <a
+              href="#"
+              class="nav__link nav__link--dropdown"
+              id="consulting-toggle"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Consulting Services
+              <span class="nav__arrow" aria-hidden="true">▾</span>
+            </a>
+
+            <ul
+              class="nav__dropdown"
+              role="menu"
+              aria-labelledby="consulting-toggle"
+            >
+              <li role="none">
+                <a role="menuitem" href="self-assessment.html"
+                  >Self-Assessment</a
+                >
+              </li>
+              <li role="none">
+                <a role="menuitem" href="services.html">Our Services</a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="verification.html">Get Verified</a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="audit-request.html">Request Audit</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav__item"><a href="signin.html">Sign in / Sign up</a></li>
+        </ul>
+
+        <div
+          class="nav__controls"
+          role="group"
+          aria-label="Accessibility controls"
+        >
+          <button
+            type="button"
+            class="btn btn--ghost"
+            id="btn-contrast"
+            aria-pressed="false"
+            aria-label="Toggle high contrast mode"
+          >
+            High Contrast
+          </button>
+          <button
+            type="button"
+            class="btn btn--ghost"
+            id="btn-read"
+            aria-label="Read page content aloud"
+          >
+            Read Page
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero" id="main-content">
+      <div class="container">
+        <h1 class="hero__title">Get Verified with Ableverse</h1>
+        <p class="hero__subtitle">
+          Earn trusted accessibility badges to showcase your commitment to
+          inclusivity.
+        </p>
+      </div>
+    </header>
+
+    <!-- BADGE TIERS -->
+    <main class="container">
+      <section class="badge-tiers">
+        <h2>Choose Your Verification Level</h2>
+
+        <div class="grid">
+          <!-- Just Verified (Remote) -->
+          <article class="card badge-card" aria-labelledby="badge-just">
+            <div class="card__media badge-icon">
+              <img src="public/badge-just.svg" alt="" />
+            </div>
+            <div class="card__body">
+              <h3 id="badge-just">Just Verified</h3>
+              <p class="badge-type">Remote Audit</p>
+              <ul class="badge-features">
+                <li>Remote digital + photo review</li>
+                <li>WCAG 2.2 AA compliance check</li>
+                <li>Public scorecard with criteria</li>
+                <li>Badge valid for 12 months</li>
+                <li>Listed in Ableverse directory</li>
+              </ul>
+              <p><strong>Starting at 4,900,000 VND</strong></p>
+              <a href="audit-request.html?type=just" class="btn btn--primary"
+                >Get Just Verified</a
+              >
+            </div>
+          </article>
+
+          <!-- Verified+ (On-Site) -->
+          <article class="card badge-card" aria-labelledby="badge-plus">
+            <div class="card__media badge-icon">
+              <img src="public/badge-plus.svg" alt="" />
+            </div>
+            <div class="card__body">
+              <h3 id="badge-plus">Verified+</h3>
+              <p class="badge-type">On-Site Audit</p>
+              <ul class="badge-features">
+                <li>Full on-site inspection</li>
+                <li>Photos + 360° tour (optional)</li>
+                <li>Detailed improvement report</li>
+                <li>Badge valid for 24 months</li>
+                <li>Featured in directory with photos</li>
+                <li>Priority support</li>
+              </ul>
+              <p><strong>Starting at 12,900,000 VND</strong></p>
+              <a href="audit-request.html?type=plus" class="btn btn--primary"
+                >Get Verified+</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="how-it-works">
+        <h2>How It Works</h2>
+        <ol class="steps">
+          <li>
+            <strong>1. Request Audit</strong><br />
+            Fill out our form with your website, photos, or venue details.
+          </li>
+          <li>
+            <strong>2. Expert Review</strong><br />
+            Our certified consultants evaluate your accessibility.
+          </li>
+          <li>
+            <strong>3. Receive Report</strong><br />
+            Get a detailed scorecard and improvement plan.
+          </li>
+          <li>
+            <strong>4. Earn Badge</strong><br />
+            Display your verified badge on your site and in our directory.
+          </li>
+        </ol>
+      </section>
+
+      <!-- SAMPLE BADGE DISPLAY -->
+      <section class="badge-preview">
+        <h2>Sample Badge on Your Website</h2>
+        <div class="badge-sample">
+          <img
+            src="public/badge-just.svg"
+            alt="Just Verified Badge"
+            width="120"
+          />
+          <code
+            >&lt;img src="https://ableverse.vn/badges/just-verified.svg"
+            alt="Just Verified by Ableverse"&gt;</code
+          >
+        </div>
+        <p><em>Copy & paste the code to display on your site.</em></p>
+      </section>
+
+      <!-- PUBLIC DIRECTORY PREVIEW -->
+      <section class="directory-preview">
+        <h2>Your Listing in Ableverse Directory</h2>
+        <div class="card directory-card">
+          <img src="public/a.jpg" alt="A Cafe exterior" />
+          <div class="card__body">
+            <h3>A Cafe</h3>
+            <p><strong>Just Verified</strong> • Expires: Nov 2026</p>
+            <p>Score: 85/100 • 2.4 km from you</p>
+            <a href="#" class="btn btn--primary">View Profile</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

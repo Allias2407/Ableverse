@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Assessment - Accessibly Verified</title>
+    <link rel="stylesheet" href="index.html"> <!-- Reuse styles -->
+    <style>
+        form { max-width: 700px; margin: 2rem auto; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        label { display: block; margin: 1.2rem 0 0.5rem; font-weight: 600; }
+        select { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        #result { margin-top: 2rem; padding: 1.5rem; background: #d4edda; border-radius: 8px; display: none; }
+        #progress { height: 12px; background: #ddd; border-radius: 6px; overflow: hidden; margin: 1rem 0; }
+        #bar { height: 100%; background: #28a745; width: 0%; transition: width 0.5s ease; }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- NAV (same as index.html) -->
+  <nav role="navigation" aria-label="Main navigation">
+      <div class="nav__bar container">
+        <button
+          class="nav__toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <ul class="nav__list" id="nav-list">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+
+          <!-- Dropdown – button styled exactly like a link -->
+          <li class="nav__item nav__item--dropdown">
+            <a
+              href="#"
+              class="nav__link nav__link--dropdown"
+              id="consulting-toggle"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Consulting Services
+              <span class="nav__arrow" aria-hidden="true">▾</span>
+            </a>
+
+            <ul
+              class="nav__dropdown"
+              role="menu"
+              aria-labelledby="consulting-toggle"
+            >
+              <li role="none">
+                <a role="menuitem" href="self-assessment.html"
+                  >Self-Assessment</a
+                >
+              </li>
+              <li role="none">
+                <a role="menuitem" href="services.html">Our Services</a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="verification.html">Get Verified</a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="audit-request.html">Request Audit</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav__item"><a href="signin.html">Sign in / Sign up</a></li>
+        </ul>
+
+        <div
+          class="nav__controls"
+          role="group"
+          aria-label="Accessibility controls"
+        >
+          <button
+            type="button"
+            class="btn btn--ghost"
+            id="btn-contrast"
+            aria-pressed="false"
+            aria-label="Toggle high contrast mode"
+          >
+            High Contrast
+          </button>
+          <button
+            type="button"
+            class="btn btn--ghost"
+            id="btn-read"
+            aria-label="Read page content aloud"
+          >
+            Read Page
+          </button>
+        </div>
+      </div>
+    </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero" id="main-content">
+    <div class="container">
+      <h1 class="hero__title">Self-Assessment Tool</h1>
+      <p class="hero__subtitle">
+        Answer 8 quick questions to see your accessibility readiness score.</p>
+    </div>
+  </header>
+    <section>
+        <form id="assessmentForm">
+            <label>1. Do all images on your website have alt text?</label>
+            <select name="q1"><option value="0">No</option><option value="12.5">Yes</option></select>
+
+            <label>2. Is your physical space wheelchair accessible (ramps/elevators)?</label>
+            <select name="q2"><option value="0">No</option><option value="12.5">Yes</option></select>
+
+            <label>3. Do videos have closed captions?</label>
+            <select name="q3"><option value="0">No</option><option value="12.5">Yes</option></select>
+
+            <label>4. Can users navigate your site using only a keyboard?</label>
+            <select name="q4"><option value="0">No</option><option value="12.5">Yes</option></select>
+
+            <label>5. Are there braille or tactile signs in your venue?</label>
+            <select name="q5"><option value="0">No</option><option value="12.5">Yes</option></select>
+
+            <label>6. Does your app support screen readers?</label>
+            <select name="q6"><option value="0">No</option><option value="12.5">Yes</option></select>
+
+            <label>7. Do you offer sensory-friendly hours or quiet zones?</label>
+            <select name="q7"><option value="0">No</option><option value="12.5">Yes</option></select>
+
+            <label>8. Is color contrast sufficient (WCAG AA)?</label>
+            <select name="q8"><option value="0">No</option><option value="12.5">Yes</option></select>
+
+            <button type="button" class="cta" onclick="calculateScore()" style="margin-top:2rem;">Get My Score</button>
+        </form>
+
+        <div id="result">
+            <h3>Your Accessibility Score: <span id="score">0</span>/100</h3>
+            <div id="progress"><div id="bar"></div></div>
+            <p id="summary"></p>
+            <button class="cta" onclick="location.href='audit-request.html'">Request Full Audit →</button>
+        </div>
+    </section>
+
+    <script>
+        function calculateScore() {
+            const form = document.getElementById('assessmentForm');
+            let total = 0;
+            for (let i = 1; i <= 8; i++) {
+                total += parseFloat(form.elements['q' + i].value);
+            }
+            const score = Math.round(total);
+            document.getElementById('score').innerText = score;
+            document.getElementById('bar').style.width = score + '%';
+            document.getElementById('result').style.display = 'block';
+
+            let summary = '';
+            if (score < 40) summary = "Needs major improvements.";
+            else if (score < 70) summary = "On the right track — keep going!";
+            else summary = "Great job! You're close to certification.";
+            document.getElementById('summary').innerText = summary;
+        }
+    </script>
+
+    <footer style="background:#333;color:#ddd;padding:2rem;text-align:center;">
+        <p>© 2025 Accessibly Verified</p>
+    </footer>
+</body>
+</html>

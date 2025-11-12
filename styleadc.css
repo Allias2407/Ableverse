@@ -34,7 +34,7 @@
   --color-warning: #8a6a00;
 
   /* Borders / focus */
-  --color-border: #d1d5db;
+  --color-border: #6b7280;
   --focus-ring: 3px solid #2563eb;
 
   /* Metrics */
@@ -242,6 +242,87 @@ nav[role="navigation"] {
 }
 .nav__toggle {
   display: none;
+}
+/* -------------------------------------------------
+   3) Nav – Dropdown that looks like a normal link
+   ------------------------------------------------- */
+
+/* Base link style (already in your file) */
+.nav__item a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  display: inline-block;
+  min-height: var(--min-tap);
+}
+.nav__item a:hover,
+.nav__item a:focus-visible {
+  background: var(--color-primary);
+  color: var(--color-primary-on);
+  border-radius: var(--radius-md);
+}
+
+/* Dropdown trigger – same as any link */
+.nav__link--dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.nav__arrow {
+  font-size: .8rem;
+  transition: transform .2s ease;
+}
+.nav__link--dropdown[aria-expanded="true"] .nav__arrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown container */
+.nav__item--dropdown {
+  position: relative;
+}
+.nav__dropdown {
+  display: none;                     /* hidden by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--color-surface-2);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+  min-width: 200px;
+  z-index: 300;
+  list-style: none;
+  margin: 0;
+  padding: .5rem 0;
+}
+.nav__dropdown a {
+  display: block;
+  padding: 10px 16px;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.nav__dropdown a:hover,
+.nav__dropdown a:focus-visible {
+  background: var(--color-primary);
+  color: var(--color-primary-on);
+}
+
+/* Show dropdown on hover / focus-within */
+.nav__item--dropdown:hover .nav__dropdown,
+.nav__item--dropdown:focus-within .nav__dropdown {
+  display: block;
+}
+
+/* Mobile – keep the same toggle logic you already have */
+@media (max-width: 768px) {
+  .nav__dropdown {
+    position: static;
+    box-shadow: none;
+    border-top: 1px solid var(--color-muted);
+    border-radius: 0;
+  }
 }
 @media (max-width: 768px) {
   .nav__bar {
@@ -916,3 +997,21 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+.card_meta_mini {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  max-width: 100%;
+  gap: 10px;
+}
+
+.card__status {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+

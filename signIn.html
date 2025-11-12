@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Sign in to Ableverse to manage your accessibility audits, badges, and directory listing."
+    />
+    <title>Sign In – Ableverse</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- NAV (same as all pages) -->
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav__bar container">
+        <button
+          class="nav__toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <ul class="nav__list" id="nav-list">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+
+          <!-- Dropdown – button styled exactly like a link -->
+          <li class="nav__item nav__item--dropdown">
+            <a
+              href="#"
+              class="nav__link nav__link--dropdown"
+              id="consulting-toggle"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Consulting Services
+              <span class="nav__arrow" aria-hidden="true">▾</span>
+            </a>
+
+            <ul
+              class="nav__dropdown"
+              role="menu"
+              aria-labelledby="consulting-toggle"
+            >
+              <li role="none">
+                <a role="menuitem" href="self-assessment.html"
+                  >Self-Assessment</a
+                >
+              </li>
+              <li role="none">
+                <a role="menuitem" href="services.html">Our Services</a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="verification.html">Get Verified</a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="audit-request.html">Request Audit</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav__item"><a href="signin.html">Sign in / Sign up</a></li>
+        </ul>
+
+        <div
+          class="nav__controls"
+          role="group"
+          aria-label="Accessibility controls"
+        >
+          <button
+            type="button"
+            class="btn btn--ghost"
+            id="btn-contrast"
+            aria-pressed="false"
+            aria-label="Toggle high contrast mode"
+          >
+            High Contrast
+          </button>
+          <button
+            type="button"
+            class="btn btn--ghost"
+            id="btn-read"
+            aria-label="Read page content aloud"
+          >
+            Read Page
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO / SIGN IN FORM -->
+    <header class="hero" id="main-content">
+      <div class="container">
+        <h1 class="hero__title">Welcome Back</h1>
+        <p class="hero__subtitle">
+          Sign in to manage your audits, badges, and directory listing.
+        </p>
+
+        <form class="signin-form" novalidate>
+          <div class="form-group">
+            <label for="email"
+              >Email Address <span class="required">*</span></label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="you@business.com"
+              aria-describedby="email-error"
+            />
+            <p id="email-error" class="error-msg" aria-live="polite"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="password"
+              >Password <span class="required">*</span></label
+            >
+            <div class="input-group">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                minlength="8"
+                placeholder="••••••••"
+                aria-describedby="password-error"
+              />
+              <button
+                type="button"
+                class="btn--voice"
+                id="toggle-password"
+                aria-label="Show password"
+              >
+                Show
+              </button>
+            </div>
+            <p id="password-error" class="error-msg" aria-live="polite"></p>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox">
+              <input type="checkbox" id="remember" />
+              <span class="checkmark"></span>
+              Remember me
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn--primary full-width">
+            Sign In
+          </button>
+
+          <p class="text-center mt-2">
+            Don’t have an account?
+            <a href="signup.html" class="text-link">Sign up</a>
+          </p>
+        </form>
+      </div>
+    </header>
+
+    <script src="script.js"></script>
+  </body>
+</html>

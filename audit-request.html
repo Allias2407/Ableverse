@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request Audit - Accessibly Verified</title>
+    <style>
+      form {
+        max-width: 600px;
+        margin: 2rem auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 0.8rem;
+        margin: 0.5rem 0 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+      .cta {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV (same as index.html) -->
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav__bar container">
+        <button
+          class="nav__toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <ul class="nav__list" id="nav-list">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+
+          <!-- Dropdown – button styled exactly like a link -->
+          <li class="nav__item nav__item--dropdown">
+            <a
+              href="#"
+              class="nav__link nav__link--dropdown"
+              id="consulting-toggle"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Consulting Services
+              <span class="nav__arrow" aria-hidden="true">▾</span>
+            </a>
+
+            <ul
+              class="nav__dropdown"
+              role="menu"
+              aria-labelledby="consulting-toggle"
+            >
+              <li role="none">
+                <a role="menuitem" href="self-assessment.html"
+                  >Self-Assessment</a
+                >
+              </li>
+              <li role="none">
+                <a role="menuitem" href="services.html">Our Services</a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="verification.html">Get Verified</a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="audit-request.html">Request Audit</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav__item"><a href="signin.html">Sign in / Sign up</a></li>
+        </ul>
+
+        <div
+          class="nav__controls"
+          role="group"
+          aria-label="Accessibility controls"
+        >
+          <button
+            type="button"
+            class="btn btn--ghost"
+            id="btn-contrast"
+            aria-pressed="false"
+            aria-label="Toggle high contrast mode"
+          >
+            High Contrast
+          </button>
+          <button
+            type="button"
+            class="btn btn--ghost"
+            id="btn-read"
+            aria-label="Read page content aloud"
+          >
+            Read Page
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero" id="main-content">
+      <div class="container">
+        <h1 class="hero__title">Request an Accessibility Audit</h1>
+      </div>
+    </header>
+
+    <section>
+      <form action="#" method="POST">
+        <label>Your Name *</label>
+        <input type="text" required />
+
+        <label>Email *</label>
+        <input type="email" required />
+
+        <label>Business Name</label>
+        <input type="text" />
+
+        <label>Website URL (if applicable)</label>
+        <input type="url" />
+
+        <label>Type of Audit</label>
+        <select>
+          <option>Digital (Website/App)</option>
+          <option>Physical Space</option>
+          <option>Both</option>
+        </select>
+
+        <label>Upload Photos / Sitemap / Files</label>
+        <input type="file" multiple />
+
+        <label>Message</label>
+        <textarea rows="4" placeholder="Tell us about your needs..."></textarea>
+
+        <button type="submit" class="cta">Submit Request</button>
+      </form>
+      <p style="text-align: center; color: #666; margin-top: 1rem">
+        You’ll receive an auto-confirmation email immediately.
+      </p>
+    </section>
+
+    <footer
+      style="background: #333; color: #ddd; padding: 2rem; text-align: center"
+    >
+      <p>© 2025 Accessibly Verified</p>
+    </footer>
+  </body>
+</html>

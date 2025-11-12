@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[PAGE TITLE] - Accessibly Verified</title>
+    <style>
+        body { font-family: Arial; margin:0; line-height:1.6; }
+        header { background:#007bff; color:white; padding:2rem; text-align:center; }
+        nav { background:white; padding:1rem; text-align:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+        nav a { margin:0 1rem; color:#007bff; text-decoration:none; }
+        section { padding:3rem 1rem; max-width:1000px; margin:auto; }
+        .pillars { display:flex; gap:2rem; flex-wrap:wrap; justify-content:center; }
+        .pillar { flex:1; min-width:250px; background:#f8f9fa; padding:2rem; border-radius:12px; }
+        footer { background:#333; color:#ddd; padding:2rem; text-align:center; }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV (same as index.html) -->
+  <nav role="navigation" aria-label="Main navigation">
+      <div class="nav__bar container">
+        <button
+          class="nav__toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <ul class="nav__list" id="nav-list">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+
+          <!-- Dropdown – button styled exactly like a link -->
+          <li class="nav__item nav__item--dropdown">
+            <a
+              href="#"
+              class="nav__link nav__link--dropdown"
+              id="consulting-toggle"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Consulting Services
+              <span class="nav__arrow" aria-hidden="true">▾</span>
+            </a>
+
+            <ul
+              class="nav__dropdown"
+              role="menu"
+              aria-labelledby="consulting-toggle"
+            >
+              <li role="none">
+                <a role="menuitem" href="self-assessment.html"
+                  >Self-Assessment</a
+                >
+              </li>
+              <li role="none">
+                <a role="menuitem" href="services.html">Our Services</a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="verification.html">Get Verified</a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="audit-request.html">Request Audit</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav__item"><a href="signin.html">Sign in / Sign up</a></li>
+        </ul>
+
+        <div
+          class="nav__controls"
+          role="group"
+          aria-label="Accessibility controls"
+        >
+          <button
+            type="button"
+            class="btn btn--ghost"
+            id="btn-contrast"
+            aria-pressed="false"
+            aria-label="Toggle high contrast mode"
+          >
+            High Contrast
+          </button>
+          <button
+            type="button"
+            class="btn btn--ghost"
+            id="btn-read"
+            aria-label="Read page content aloud"
+          >
+            Read Page
+          </button>
+        </div>
+      </div>
+    </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero" id="main-content">
+    <div class="container">
+      <h1 class="hero__title">Our Main Services</h1>
+    </div>
+  </header>
+
+<section>
+    <div class="pillars">
+        <div class="pillar"><h3>Digital Audit</h3><p>Websites, apps, PDFs.</p></div>
+        <div class="pillar"><h3>Physical Audit</h3><p>Buildings, stores, venues.</p></div>
+        <div class="pillar"><h3>Training</h3><p>Staff workshops.</p></div>
+    </div>
+</section>
+
+<footer><p>© 2025 Accessibly Verified</p></footer>
+</body>
+</html>
