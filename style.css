@@ -203,6 +203,12 @@ li { margin-bottom: var(--space-sm); }
   gap: var(--space-md);
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 20px;
+}
+
 /* ==========================================================================
    3) NAVIGATION
    ========================================================================== */
@@ -326,6 +332,43 @@ nav[role="navigation"] {
   cursor: pointer;
   min-height: var(--min-tap);
   padding: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+  .nav__bar {
+    flex-wrap: wrap;
+  }
+  .nav__list {
+    display: none;
+    flex-direction: column;
+    order: 3;
+    width: 100%;
+  }
+  .nav__list--open {
+    display: flex;
+  }
+  .nav__toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 24px;
+    cursor: pointer;
+    min-height: var(--min-tap);
+    order: 1;
+  }
+  .nav__controls {
+    order: 2;
+    margin-left: auto;
+  }
+  .nav__dropdown {
+    position: static;
+  }
+}
+.nav__controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 /* ==========================================================================
@@ -905,6 +948,10 @@ textarea:focus {
    /* ==========================
    SIGN IN PAGE STYLES
    ========================== */
+/* .hero {
+  max-height: 100vh;
+} */
+
 .signin-form {
   background: var(--surface);
   padding: 2.5rem;
