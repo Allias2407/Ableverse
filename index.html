@@ -338,8 +338,7 @@
               <div class="text-card">
                 <h3 id="place-alla-hotel">Alla Hotel</h3>
                 <div class="card__status" aria-label="Availability status">
-                  <span class="status-green status--open">Open Now</span>
-                  <div class="rating__overall">Need Improvement</div>
+                  <span class="status-red status--open">Closed</span>
                 </div>
                 <div class="card__description">
                   <p>
@@ -354,7 +353,7 @@
                 <button
                   type="button"
                   class="btn btn--primary"
-                  data-detail="alla-hotel"
+                  data-detail="pho24"
                   aria-label="View details for Alla Hotel"
                 >
                   View Details
@@ -362,7 +361,7 @@
                 <button
                   type="button"
                   class="btn btn--primary"
-                  data-review="Alla Hotel"
+                  data-review="Phở 24 Restaurant"
                   aria-label="Submit review for Alla Hotel"
                 >
                   Submit Review
@@ -372,20 +371,32 @@
 
             <!-- keep the original three scores for screen readers / data source -->
             <div class="card__a11y sr-only">
-              <span aria-label="Accessibility for blind 55 percent"></span>
+              <span aria-label="Accessibility for blind 65 percent"></span>
               <span
-                aria-label="Accessibility for hearing impairment 10 percent"
+                aria-label="Accessibility for hearing impairment 50 percent"
               ></span>
               <span
-                aria-label="Accessibility for mobility impairment 20 percent"
+                aria-label="Accessibility for mobility impairment 80 percent"
               ></span>
             </div>
           </div>
 
           <aside class="card__meta" aria-label="Ratings">
-            <p class="distance">4.5 km</p>
+            <div class="card_meta_mini">
+              <div class="rating__overall">Recommended</div>
+              <div
+                class="rating__overall rating_color3"
+                role="img"
+                aria-label="Overall accessibility score out of 100"
+              >
+                <span class="rating__value js-overall">–</span>
+                <span class="rating__suffix">/100</span>
+              </div>
+            </div>
+            <p class="distance">4 km</p>
           </aside>
         </article>
+
         <div class="results__more">
           <button
             type="button"
