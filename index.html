@@ -36,7 +36,7 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Consulting Services
+              Services
               <span class="nav__arrow" aria-hidden="true">▾</span>
             </a>
 
@@ -322,30 +322,34 @@
 
         <article
           class="card card--shop"
-          aria-labelledby="place-alla-hotel"
-          data-blind="55"
-          data-hearing="10"
-          data-mobility="20"
-          data-service="80"
-          data-facility="70"
+          aria-labelledby="place-tch-nguyenhue"
+          data-blind="94"
+          data-hearing="90"
+          data-mobility="96"
+          data-service="95"
+          data-facility="93"
         >
           <div class="card__media">
-            <img src="public/c.jpg" alt="Interior of Alla Hotel" />
+            <img
+              src="public/signaturebythecoffeehouse.jpg"
+              alt="The Coffee House Signature Nguyễn Huệ, Quận 1"
+            />
           </div>
 
           <div class="card__body_out">
             <div class="card__body">
               <div class="text-card">
-                <h3 id="place-alla-hotel">Alla Hotel</h3>
+                <h3 id="place-tch-nguyenhue">
+                  The Coffee House Signature 
+                </h3>
                 <div class="card__status" aria-label="Availability status">
-                  <span class="status-red status--open">Closed</span>
+                  <span class="status-green status--open">Open Now</span>
                 </div>
                 <div class="card__description">
                   <p>
-                    Alla Hotel provides a comfortable stay with modern
-                    amenities. For guests with hearing impairments, the hotel
-                    offers captioned televisions, and staff trained in basic
-                    sign language to assist with communication.
+                    Flagship store with automatic sliding doors, elevator to all
+                    floors, braille & large-print menus, induction loop at
+                    counter.
                   </p>
                 </div>
               </div>
@@ -353,30 +357,105 @@
                 <button
                   type="button"
                   class="btn btn--primary"
-                  data-detail="pho24"
-                  aria-label="View details for Alla Hotel"
+                  data-detail="tch-nguyenhue"
+                  aria-label="View details for The Coffee House Signature Nguyễn Huệ"
                 >
                   View Details
                 </button>
                 <button
                   type="button"
                   class="btn btn--primary"
-                  data-review="Phở 24 Restaurant"
-                  aria-label="Submit review for Alla Hotel"
+                  data-review="The Coffee House Signature Nguyễn Huệ"
+                  aria-label="Submit review for The Coffee House Signature Nguyễn Huệ"
                 >
                   Submit Review
                 </button>
               </div>
             </div>
 
-            <!-- keep the original three scores for screen readers / data source -->
             <div class="card__a11y sr-only">
-              <span aria-label="Accessibility for blind 65 percent"></span>
+              <span aria-label="Accessibility for blind 94 percent"></span>
               <span
-                aria-label="Accessibility for hearing impairment 50 percent"
+                aria-label="Accessibility for hearing impairment 90 percent"
               ></span>
               <span
-                aria-label="Accessibility for mobility impairment 80 percent"
+                aria-label="Accessibility for mobility impairment 96 percent"
+              ></span>
+            </div>
+          </div>
+
+          <aside class="card__meta" aria-label="Ratings">
+            <div class="card_meta_mini">
+              <div class="rating__overall">Highly Recommended</div>
+              <div
+                class="rating__overall rating_color1"
+                role="img"
+                aria-label="Overall accessibility score out of 100"
+              >
+                <span class="rating__value js-overall">–</span
+                ><span class="rating__suffix">/100</span>
+              </div>
+            </div>
+            <p class="distance">0.8 km</p>
+          </aside>
+        </article>
+
+        <!-- 2. Phở Hòa Pasteur -->
+        <article
+          class="card card--shop"
+          aria-labelledby="place-pho-hoa"
+          data-blind="72"
+          data-hearing="68"
+          data-mobility="88"
+          data-service="85"
+          data-facility="80"
+        >
+          <div class="card__media">
+            <img src="public/phohoapasteur.webp" alt="Phở Hòa Pasteur, Quận 3" />
+          </div>
+
+          <div class="card__body_out">
+            <div class="card__body">
+              <div class="text-card">
+                <h3 id="place-pho-hoa">Phở Hòa Pasteur</h3>
+                <div class="card__status" aria-label="Availability status">
+                  <span class="status-green status--open">Open Now</span>
+                </div>
+                <div class="card__description">
+                  <p>
+                    Legendary phở restaurant with flat entrance, wide aisles,
+                    wheelchair-accessible toilet on ground floor, and very
+                    supportive staff.
+                  </p>
+                </div>
+              </div>
+              <div class="card__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-detail="pho-hoa"
+                  aria-label="View details for Phở Hòa Pasteur"
+                >
+                  View Details
+                </button>
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-review="Phở Hòa Pasteur"
+                  aria-label="Submit review for Phở Hòa Pasteur"
+                >
+                  Submit Review
+                </button>
+              </div>
+            </div>
+
+            <div class="card__a11y sr-only">
+              <span aria-label="Accessibility for blind 72 percent"></span>
+              <span
+                aria-label="Accessibility for hearing impairment 68 percent"
+              ></span>
+              <span
+                aria-label="Accessibility for mobility impairment 88 percent"
               ></span>
             </div>
           </div>
@@ -385,15 +464,460 @@
             <div class="card_meta_mini">
               <div class="rating__overall">Recommended</div>
               <div
+                class="rating__overall rating_color2"
+                role="img"
+                aria-label="Overall accessibility score out of 100"
+              >
+                <span class="rating__value js-overall">–</span
+                ><span class="rating__suffix">/100</span>
+              </div>
+            </div>
+            <p class="distance">2.1 km</p>
+          </aside>
+        </article>
+
+        <!-- 3. Starbucks Reserve Nhà Thờ Đức Bà -->
+        <article
+          class="card card--shop"
+          aria-labelledby="place-starbucks-reserve"
+          data-blind="90"
+          data-hearing="92"
+          data-mobility="89"
+          data-service="94"
+          data-facility="91"
+        >
+          <div class="card__media">
+            <img
+              src="public/Starbucks-Reserve-Nha-Tho.jpg"
+              alt="Starbucks Reserve Nhà Thờ Đức Bà, Quận 1"
+            />
+          </div>
+
+          <div class="card__body_out">
+            <div class="card__body">
+              <div class="text-card">
+                <h3 id="place-starbucks-reserve">
+                  Starbucks Reserve Nhà Thờ Đức Bà
+                </h3>
+                <div class="card__status" aria-label="Availability status">
+                  <span class="status-green status--open">Open Now</span>
+                </div>
+                <div class="card__description">
+                  <p>
+                    Global accessibility standard: automatic doors, braille
+                    signage, hearing loop, mobile order & pay, spacious layout,
+                    and accessible restroom.
+                  </p>
+                </div>
+              </div>
+              <div class="card__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-detail="starbucks-reserve"
+                  aria-label="View details for Starbucks Reserve Nhà Thờ Đức Bà"
+                >
+                  View Details
+                </button>
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-review="Starbucks Reserve Nhà Thờ Đức Bà"
+                  aria-label="Submit review for Starbucks Reserve Nhà Thờ Đức Bà"
+                >
+                  Submit Review
+                </button>
+              </div>
+            </div>
+
+            <div class="card__a11y sr-only">
+              <span aria-label="Accessibility for blind 90 percent"></span>
+              <span
+                aria-label="Accessibility for hearing impairment 92 percent"
+              ></span>
+              <span
+                aria-label="Accessibility for mobility impairment 89 percent"
+              ></span>
+            </div>
+          </div>
+
+          <aside class="card__meta" aria-label="Ratings">
+            <div class="card_meta_mini">
+              <div class="rating__overall">Highly Recommended</div>
+              <div
+                class="rating__overall rating_color1"
+                role="img"
+                aria-label="Overall accessibility score out of 100"
+              >
+                <span class="rating__value js-overall">–</span
+                ><span class="rating__suffix">/100</span>
+              </div>
+            </div>
+            <p class="distance">0.5 km</p>
+          </aside>
+        </article>
+
+        <!-- 4–9: Ẩn ban đầu -->
+        <article
+          class="card card--shop hidden"
+          aria-labelledby="place-pizza4p"
+          data-blind="82"
+          data-hearing="85"
+          data-mobility="90"
+          data-service="88"
+          data-facility="86"
+        >
+          <div class="card__media">
+            <img
+              src="public/4pizza.jpg"
+              alt="Pizza 4P’s Lê Thánh Tôn, Quận 1"
+            />
+          </div>
+          <div class="card__body_out">
+            <div class="card__body">
+              <div class="text-card">
+                <h3 id="place-pizza4p">Pizza 4P’s Lê Thánh Tôn</h3>
+                <div class="card__status" aria-label="Availability status">
+                  <span class="status-green status--open">Open Now</span>
+                </div>
+                <div class="card__description">
+                  <p>
+                    Elevator to upper floors, spacious wheelchair turning space,
+                    high-contrast menu, staff trained in basic sign language.
+                  </p>
+                </div>
+              </div>
+              <div class="card__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-detail="pizza4p"
+                  aria-label="View details for Pizza 4P’s Lê Thánh Tôn"
+                >
+                  View Details
+                </button>
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-review="Pizza 4P’s Lê Thánh Tôn"
+                  aria-label="Submit review for Pizza 4P’s Lê Thánh Tôn"
+                >
+                  Submit Review
+                </button>
+              </div>
+            </div>
+            <div class="card__a11y sr-only">
+              <span aria-label="Accessibility for blind 82 percent"></span>
+              <span
+                aria-label="Accessibility for hearing impairment 85 percent"
+              ></span>
+              <span
+                aria-label="Accessibility for mobility impairment 90 percent"
+              ></span>
+            </div>
+          </div>
+          <aside class="card__meta" aria-label="Ratings">
+            <div class="card_meta_mini">
+              <div class="rating__overall">Recommended</div>
+              <div
+                class="rating__overall rating_color2"
+                role="img"
+                aria-label="Overall accessibility score out of 100"
+              >
+                <span class="rating__value js-overall">–</span
+                ><span class="rating__suffix">/100</span>
+              </div>
+            </div>
+            <p class="distance">1.2 km</p>
+          </aside>
+        </article>
+
+        <article
+          class="card card--shop hidden"
+          aria-labelledby="place-banhmi-hh"
+          data-blind="48"
+          data-hearing="55"
+          data-mobility="62"
+          data-service="80"
+          data-facility="50"
+        >
+          <div class="card__media">
+            <img
+              src="public/huynh-hoa-bread.jpeg"
+              alt="Bánh Mì Huỳnh Hoa Lê Thị Riêng, Quận 1"
+            />
+          </div>
+          <div class="card__body_out">
+            <div class="card__body">
+              <div class="text-card">
+                <h3 id="place-banhmi-hh">Bánh Mì Huỳnh Hoa</h3>
+                <div class="card__status" aria-label="Availability status">
+                  <span class="status-green status--open">Open Now</span>
+                </div>
+                <div class="card__description">
+                  <p>
+                    Iconic street stall – small step at entrance, very narrow
+                    interior, no accessible toilet.
+                  </p>
+                </div>
+              </div>
+              <div class="card__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-detail="banhmi-hh"
+                >
+                  View Details
+                </button>
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-review="Bánh Mì Huỳnh Hoa"
+                >
+                  Submit Review
+                </button>
+              </div>
+            </div>
+            <div class="card__a11y sr-only">
+              <span aria-label="Accessibility for blind 48 percent"></span>
+              <span
+                aria-label="Accessibility for hearing impairment 55 percent"
+              ></span>
+              <span
+                aria-label="Accessibility for mobility impairment 62 percent"
+              ></span>
+            </div>
+          </div>
+          <aside class="card__meta" aria-label="Ratings">
+            <div class="card_meta_mini">
+              <div class="rating__overall">Need Improvement</div>
+              <div
                 class="rating__overall rating_color3"
                 role="img"
                 aria-label="Overall accessibility score out of 100"
               >
-                <span class="rating__value js-overall">–</span>
-                <span class="rating__suffix">/100</span>
+                <span class="rating__value js-overall">–</span
+                ><span class="rating__suffix">/100</span>
               </div>
             </div>
-            <p class="distance">4 km</p>
+            <p class="distance">1.5 km</p>
+          </aside>
+        </article>
+
+        <!-- Các card 6–9 giữ nguyên cấu trúc 100% (mình rút gọn comment cho gọn) -->
+        <article
+          class="card card--shop hidden"
+          aria-labelledby="place-laude404"
+          data-blind="78"
+          data-hearing="75"
+          data-mobility="92"
+          data-service="87"
+          data-facility="85"
+        >
+          <div class="card__media">
+            <img
+              src="public/laude.jpg"
+              alt="Lẩu Dê 404 Phạm Văn Đồng, Thủ Đức"
+            />
+          </div>
+          <div class="card__body_out">
+            <div class="card__body">
+              <div class="text-card">
+                <h3 id="place-laude404">Lẩu Dê 404 Phạm Văn Đồng</h3>
+                <div class="card__status" aria-label="Availability status">
+                  <span class="status-green status--open">Open Now</span>
+                </div>
+                <div class="card__description">
+                  <p>
+                    Ramp, large parking, wheelchair toilet, adjustable tables,
+                    visual fire alarm.
+                  </p>
+                </div>
+              </div>
+              <div class="card__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-detail="laude404"
+                >
+                  View Details
+                </button>
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-review="Lẩu Dê 404"
+                >
+                  Submit Review
+                </button>
+              </div>
+            </div>
+            <div class="card__a11y sr-only">
+              <span aria-label="Accessibility for blind 78 percent"></span>
+              <span
+                aria-label="Accessibility for hearing impairment 75 percent"
+              ></span>
+              <span
+                aria-label="Accessibility for mobility impairment 92 percent"
+              ></span>
+            </div>
+          </div>
+          <aside class="card__meta" aria-label="Ratings">
+            <div class="card_meta_mini">
+              <div class="rating__overall">Recommended</div>
+              <div
+                class="rating__overall rating_color2"
+                role="img"
+                aria-label="Overall accessibility score out of 100"
+              >
+                <span class="rating__value js-overall">–</span
+                ><span class="rating__suffix">/100</span>
+              </div>
+            </div>
+            <p class="distance">11 km</p>
+          </aside>
+        </article>
+
+        <article
+          class="card card--shop hidden"
+          aria-labelledby="place-cong-president"
+          data-blind="85"
+          data-hearing="80"
+          data-mobility="88"
+          data-service="90"
+          data-facility="87"
+        >
+          <div class="card__media">
+            <img
+              src="public/cong-cafe.webp"
+              alt="Cộng Cà Phê President Place Nguyễn Thị Minh Khai"
+            />
+          </div>
+          <div class="card__body_out">
+            <div class="card__body">
+              <div class="text-card">
+                <h3 id="place-cong-president">Cộng Cà Phê President Place</h3>
+                <div class="card__status" aria-label="Availability status">
+                  <span class="status-green status--open">Open Now</span>
+                </div>
+                <div class="card__description">
+                  <p>
+                    Retro vibe, ramp access, large-print menu, quiet corner
+                    available.
+                  </p>
+                </div>
+              </div>
+              <div class="card__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-detail="cong-president"
+                >
+                  View Details
+                </button>
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-review="Cộng President Place"
+                >
+                  Submit Review
+                </button>
+              </div>
+            </div>
+            <div class="card__a11y sr-only">
+              <span aria-label="Accessibility for blind 85 percent"></span>
+              <span
+                aria-label="Accessibility for hearing impairment 80 percent"
+              ></span>
+              <span
+                aria-label="Accessibility for mobility impairment 88 percent"
+              ></span>
+            </div>
+          </div>
+          <aside class="card__meta" aria-label="Ratings">
+            <div class="card_meta_mini">
+              <div class="rating__overall">Recommended</div>
+              <div
+                class="rating__overall rating_color2"
+                role="img"
+                aria-label="Overall accessibility score out of 100"
+              >
+                <span class="rating__value js-overall">–</span
+                ><span class="rating__suffix">/100</span>
+              </div>
+            </div>
+            <p class="distance">2.7 km</p>
+          </aside>
+        </article>
+
+        <article
+          class="card card--shop hidden"
+          aria-labelledby="place-bunbo77"
+          data-blind="60"
+          data-hearing="65"
+          data-mobility="75"
+          data-service="78"
+          data-facility="68"
+        >
+          <div class="card__media">
+            <img
+              src="public/bunbo.jpg"
+              alt="Bún Bò Nam Bộ 77 Bùi Viện, Quận 1"
+            />
+          </div>
+          <div class="card__body_out">
+            <div class="card__body">
+              <div class="text-card">
+                <h3 id="place-bunbo77">Bún Bò Nam Bộ 77 Bùi Viện</h3>
+                <div class="card__status" aria-label="Availability status">
+                  <span class="status-green status--open">Open Now</span>
+                </div>
+                <div class="card__description">
+                  <p>
+                    Small step at entrance, narrow space, outdoor seating only –
+                    limited accessibility.
+                  </p>
+                </div>
+              </div>
+              <div class="card__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-detail="bunbo77"
+                >
+                  View Details
+                </button>
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-review="Bún Bò 77 Bùi Viện"
+                >
+                  Submit Review
+                </button>
+              </div>
+            </div>
+            <div class="card__a11y sr-only">
+              <span aria-label="Accessibility for blind 60 percent"></span>
+              <span
+                aria-label="Accessibility for hearing impairment 65 percent"
+              ></span>
+              <span
+                aria-label="Accessibility for mobility impairment 75 percent"
+              ></span>
+            </div>
+          </div>
+          <aside class="card__meta" aria-label="Ratings">
+            <div class="card_meta_mini">
+              <div class="rating__overall">Okay</div>
+              <div
+                class="rating__overall rating_color2"
+                role="img"
+                aria-label="Overall accessibility score out of 100"
+              >
+                <span class="rating__value js-overall">–</span
+                ><span class="rating__suffix">/100</span>
+              </div>
+            </div>
+            <p class="distance">1.9 km</p>
           </aside>
         </article>
 

@@ -429,6 +429,7 @@ select:focus-visible {
   background: var(--color-surface);
   color: var(--color-text);
   font-size: medium;
+  text-decoration: none;
 }
 .btn--primary {
   background: var(--color-primary);
@@ -1013,5 +1014,7 @@ footer {
   align-items: center;
 }
 
-
+.hidden {
+  display: none !important;
+}
 

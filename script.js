@@ -421,3 +421,36 @@ if (document.querySelector('.signin-form')) {
     }
   });
 }
+
+// ========== VIEW MORE FUNCTIONALITY ==========
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll("#results .card");
+  const btnMore = document.getElementById("btn-more");
+  const cardsPerPage = 3;
+  let currentIndex = 3; // 3 card đầu đã hiển thị
+
+  // Ẩn các card từ thứ 4 trở đi
+  cards.forEach((card, i) => {
+    if (i >= 3) card.classList.add("hidden");
+  });
+
+  if (btnMore) {
+    btnMore.addEventListener("click", function () {
+      let count = 0;
+      for (let i = currentIndex; i < cards.length && count < cardsPerPage; i++) {
+        cards[i].classList.remove("hidden");
+        currentIndex++;
+        count++;
+      }
+
+      // Nếu đã hiện hết → ẩn nút
+      if (currentIndex >= cards.length) {
+        btnMore.style.display = "none";
+        // Thông báo cho screen reader
+        document.getElementById("sr-live").textContent = "All locations have been loaded.";
+      } else {
+        document.getElementById("sr-live").textContent = `${count} more locations loaded.`;
+      }
+    });
+  }
+});
